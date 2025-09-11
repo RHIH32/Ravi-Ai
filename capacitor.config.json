@@ -4,7 +4,7 @@
   "appName": "Ravi AI",
   "webDir": "www",
   "server": {
-    "url": "https://ravi-ai.onrender.com",
+    "url": "https://ravi-ai-i6h0.onrender.com",
     "cleartext": true
   }
 }
