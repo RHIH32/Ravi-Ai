@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Ravi AI</string>
-    <string name="title_activity_main">Ravi AI</string>
+    <string name="app_name">ravi-ai-app</string>
+    <string name="title_activity_main">ravi-ai-app</string>
     <string name="package_name">com.raviai.app</string>
     <string name="custom_url_scheme">com.raviai.app</string>
 </resources>
