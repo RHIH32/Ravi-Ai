@@ -2,12 +2,14 @@ const express = require('express');
 const axios = require('axios');
 const crypto = require('crypto');
 const Razorpay = require('razorpay');
+const cors = require('cors'); // ZAROORI: CORS ko enable karne ke liye
 require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware
+app.use(cors()); // ZAROORI: CORS middleware ka istemaal karein
 app.use(express.json({ limit: '10mb' }));
 app.use(express.static(__dirname));
 
@@ -85,14 +87,14 @@ app.post('/api/generate-image', async (req, res) => {
     }
 });
 
-// === Payment API Endpoints (No changes here) ===
+// === Payment API Endpoints ===
 app.post('/api/create-subscription', async (req, res) => {
     try {
         const subscription = await razorpay.subscriptions.create({
             plan_id: RAZORPAY_PLAN_ID,
             customer_notify: 1,
             quantity: 1,
-            total_count: 1, // The subscription will run for 1 months
+            total_count: 1, // The subscription will run for 1 month
         });
 
         res.json({
@@ -135,3 +137,4 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Ravi AI server is running at http://localhost:${port}`);
 });
+
