@@ -1,9 +1,0 @@
-{
-	"appId": "com.raviai.app",
-	"appName": "ravi-ai-app",
-	"webDir": "www",
-	"server": {
-		"url": "[https://ravi-ai-i6h0.onrender.com](https://ravi-ai-i6h0.onrender.com)",
-		"cleartext": true
-	}
-}
